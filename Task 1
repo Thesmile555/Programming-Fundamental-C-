@@ -1,9 +1,14 @@
 #include<iostream>
 using namespace std;
 main()
-	
 	{
-		int num1, num2;
+		int num1,num2;
 		cin>>num1>>num2;
-		cout<<num1+num2;
+		cout<<num1+num2<<"  Sum is "<<endl;
+		cout<<num1*num2<<"  Multiplication is "<<endl;
+		cout<<num1-num2<<"  Subtraction  is "<<endl;
+		cout<<num1/num2<<"  Reminder is "<<endl;
+	
+	
+		
 	}
