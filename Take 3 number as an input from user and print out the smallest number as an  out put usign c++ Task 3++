@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+main()
+	{
+		int num1,num2,num3;
+		cout<<"Enter any of three number and find a smallest Number on them "<<endl;
+		cin>>num1>>num2>>num3;
+		
+	//Implementing Condition on Numbers
+	//Checking Smaller Number
+	
+		if(num1<num2&&num1<num3)
+		cout<<"Number 1 is less then number 2 and numbe 3 "<<endl;
+		else if(num2<num1&&num2<num3)
+		cout<<"Number 2 is less then number 1 and numbe 3 "<<endl;
+		else if(num3<num2&&num3<num1)
+		cout<<"Number 3 is less then number 1 and numbe 2 "<<endl;
+	
+		
+	}
