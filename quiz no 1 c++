@@ -3,42 +3,26 @@ using namespace std;
 main()
 	{
    
-     	int n;	//negative number counter
-		int num;	//input: user enters number
-		int sum = 0;
-		int temp;
-	 //As we are dealing with the sum, so initializing with 0.
-  
- //taking input from the (user)
-    cout << " Start From Here : ";
+   
+     int negative;
+	 int sum;
+     int number;
+
+
+    cout << " From where you want to --> Start ";
+    	do {
+			cin >> number;
+			sum = sum + number;
+			cout << sum << endl;
+			}
+   
+    while(number<negative);
     
-  
-do {
-cin >> num;
-
-sum = sum + num;
-cout << sum << endl;
-
-
-}
-    //taking n numbers as input from the user and adding them to find the final sum
-    while(num<n);
-    
-    	if(num> 0 )
+    	if(number>negative )
 	{
-		
-        cout << "Enter number" << num+1 << " :  ";
-        num++;
+		 cout << " " <<number;
+         number ++;
     }
-        cin >> temp;
-        //add each number to the sum of all the previous numbers to find the final sum
-        sum += temp;
-        
+   
     
-    
-    cout << "\nSum of the " << n << " numbers entered by the user is : "<< sum << endl;
-    cout << "\n\n\n";
-
-    return 0;
-		
-	}
+  	}
