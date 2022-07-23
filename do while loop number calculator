@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+main()
+	{
+		int nagitive;//negative number
+		int number;//Input from user
+		int sum = 0; // to add all numbers
+		
+		// we will use Do While loopo for this Program
+		
+		do
+			{
+				cin>>number;
+				sum = sum + number;
+				cout<<sum<<endl;
+				
+				
+			}
+			 while(number<nagitive || number > nagitive );
+			if(number>sum || number< sum)
+			{
+				cout<<" "<<number;
+				sum++;
+			}
+			
+		
+	}
