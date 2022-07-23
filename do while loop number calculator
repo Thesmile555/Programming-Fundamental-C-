@@ -2,11 +2,10 @@
 using namespace std;
 main()
 	{
-		int nagitive;//negative number
-		int number;//Input from user
-		int sum = 0; // to add all numbers
-		
-		// we will use Do While loopo for this Program
+		int nagitive_number;
+		int number;
+		int sum = 0; 
+		cout<<"Start From Here --> ";
 		
 		do
 			{
@@ -14,14 +13,10 @@ main()
 				sum = sum + number;
 				cout<<sum<<endl;
 				
-				
 			}
-			 while(number<nagitive || number > nagitive );
-			if(number>sum || number< sum)
-			{
-				cout<<" "<<number;
-				sum++;
-			}
-			
+			 while(number<nagitive_number || number > nagitive_number );
 		
-	}
+				cout<<number;
+				sum++;
+			
+				}
