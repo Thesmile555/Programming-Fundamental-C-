@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+		printmydetail()//declare
+	
+	{
+		int id=36417;
+		string MyName = "Hamza Rehman";
+		cout<<MyName<<endl<<id;
+		
+		
+	}
+	
+	 	main()
+	
+	{
+  		 	 printmydetail();//call
+   		
+	}
