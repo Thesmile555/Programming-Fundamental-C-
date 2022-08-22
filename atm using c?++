@@ -1,130 +1,200 @@
 #include<iostream> 
 #include<iomanip>
 using namespace std;
+
+long Balance = 100000,otherAccHolder,diposit;//Global Veriable
         struct ATMBank //Structure for ATM Bank
-	{
-		int account_number,pin,withdraw,diposit,transfer;
-		long  int balance = 100000;
+		{
+		long account_number,withdraw,transfer;
+		int pin;
 	
 		char name [20];
-		
-	};
+	
+		};
 	
 	
     	main()//main function
-    {
+	   {
 			char choice;
 			int MainMenu;
-			int Balance;
+			
 			ATMBank ab;
 			int Button;
+			for (int i = 1; i<=5; i++ )
+				cout<<" Welcome ********To Programming*********ATM MACHINE "<<endl;
+				cout<<endl;
+				cout<<endl;
+				cout<<endl;
+						
 			cout<<"Enter your Account Number --> ";
 			cin>>ab.account_number;
 			while(ab.account_number != 123456789)
-	{
+		 {
 			cout<<"Invalid Account Number --> ";
 			cin>>ab.account_number;
-	}
-			cout<<"Enter your PIN code --> ";
-			cin>>ab.pin;
-			while(ab.pin != 1234)
-	{
-			cout<<"Re Entered Your Pin (Invalid =) --> ";
-			cin>>ab.pin;
-	}
-		 	label: do
-	{
-			cout<<setw(90)<<" 	Main Menu "<<endl;
-			cout<<" 1. Cash Withrawal  "<<endl;
-			cout<<" 2. Cash Deposit "<<endl;
-			cout<<" 3. Check Balance "<<endl;
-			cout<<" 4. Transfer Cash "<<endl;
-			cout<<" 5. Exit Transaction "<<endl;
-			cout<<"Enter Choice ";
-			cin>>MainMenu;
+		 }
+		cout<<"Enter your PIN code --> ";
+		cin>>ab.pin;
+		while(ab.pin != 1234)
+		 {
+		cout<<"Re Entered Your Pin (Invalid =) --> ";
+		cin>>ab.pin;
+		
+		 }
+		 cout<<endl;
+cout<<endl;
+		 label: do
+		 {
+		 	for(int i = 1; i<=6; i++)
+		cout<<" Main Menu***********Main Menu***********Main Menu "<<endl;
+cout<<endl;
+cout<<endl;
+cout<<endl;
+
+						cout<<" 1. Cash Withrawal  "<<endl;
+						cout<<" 2. Cash Deposit "<<endl;
+						cout<<" 3. Check Balance "<<endl;
+						cout<<" 4. Transfer Cash "<<endl;
+						cout<<" 5. Exit Transaction "<<endl;
+						cout<<"Enter Choice ";
+		cin>>MainMenu;
 			
-			switch(MainMenu) 
-	{
-			case 1: 
-			cout<<" Enter Amount "<<endl;
-			cin>>ab.withdraw;
-			while(ab.withdraw % 500 != 0) //while reminder is not == 0
+		switch(MainMenu) 
+		{
+		case 1: cout<<" Enter Amount "<<endl;
+		
+		cin>>ab.withdraw;
+	
+			
+		
+		while(ab.withdraw % 500 != 0) //while reminder is not == 0
 	{   
-			cout<<" Enter Correct Amount "<<endl;
-			cin>>ab.withdraw;
+		cout<<" Enter Correct Amount "<<endl;
+		cin>>ab.withdraw;
 	}	
+		if(ab.withdraw<Balance){
 		
-			cout<<" Withdraw Successfully "<<endl;
-			Balance = ab.balance-ab.withdraw;
-			cout<<" Your New Balance is  "<<Balance<<endl;
+		cout<<" Withdraw Successfully "<<endl;
+		Balance = Balance-ab.withdraw;
+		cout<<" Your New Balance is  "<<Balance<<endl;
+	}
+	else
+	{
+		cout<<"Insufficent Balance "<<endl;
+	}
 		
-		
-			cout<<" ____________________________________________________"<<endl;
-			cout<<" Do you want Another Transaction "<<endl;
-			cin>>choice;
+		cout<<" ____________________________________________________"<<endl;
+		cout<<" Do you want Another Transaction "<<endl;
+		cin>>choice;
+		while(choice == 'n' || choice == 'N')
+		{
+				cout<<"Thank you for Using Programming ATM Machine "<<endl;
+				
+					goto here;
+			
+		}
 	
 
 		
 		
-	  		cout<<"Enter Amount "<<endl;
-			while( choice == 'Y' || choice == 'y')
+	  cout<<"Enter Amount "<<endl;
+		while( choice == 'Y' || choice == 'y')
+		{
+	
+		cin>>ab.withdraw;
+		while(ab.withdraw % 500 != 0)
 	{
 	
-			cin>>ab.withdraw;
-			while(ab.withdraw % 500 != 0)
-	{
-	
-			cout<<" Enter Correct Amount "<<endl;
-			cin>>ab.withdraw;
+		cout<<" Enter Correct Amount "<<endl;
+		cin>>ab.withdraw;
     }
-			Balance = Balance - ab.withdraw;
-			cout<<" Withdraw Successfully "<<endl;
+		Balance = Balance - ab.withdraw;
+		cout<<" Withdraw Successfully "<<endl;
 		
-			cout<<" _____________________________________________"<<endl;
-			cout<<" Your New Balance is  "<<Balance<<endl;
-			cout<<"Press 1  MainMEnu "<<endl;
-			cout<<"Press 2  for Exit "<<endl;
-			cin>>Button;
-			if(Button == 1)
+		cout<<" _____________________________________________"<<endl;
+		cout<<" Your New Balance is  "<<Balance<<endl;
+		
+		here: cout<<"Press 1  for Main Menu "<<endl;
+		cout<<"Press 2  for Exit "<<endl;
+		cin>>Button;
+		if(Button==1) goto label; 
+		if(Button == 2)  for (int i = 1; i<=5; i++ )
+				cout<<" THANK YOU ===========FOR USING==========ATM MACHINE "<<endl;
+				
+						}
+			
+
+	break;
+		
+		case 2: cout<<" Enter Amount which you want to Deposit "<<endl;
+		cin>>diposit;
+		Balance = Balance + diposit;
+		cout<<"  "<<diposit <<" Has been diposit to your account "<<endl
+		<<"  your new Balance is  "<<Balance<<endl;
+		cout<<"Press 1  for Main Menu "<<endl;
+		cout<<"Press 2  for Exit "<<endl;
+		cin>>Button;
+		if(Button == 1)
 		
 			goto label;
 		
-	    	else if(Button == 2)
-	{
-			cout<<"Thank you for Using Programming ATM Machine "<<endl;
-	}
-			return 0;
+	    else	if(Button == 2)
+		{
+			for (int i = 1; i<=5; i++ )
+				cout<<" THANK YOU ===========FOR USING==========ATM MACHINE "<<endl;
+				
+						}
 		
+			break;
+			
+			case 3: cout<< "  Your Total Balance is "<<"  "<<Balance<<endl;
+			cout<<"Press 1  for Main Menu "<<endl;
+		cout<<"Press 2  for Exit "<<endl;
+		cin>>Button;
+		if(Button == 1)
+		
+			goto label;
+		
+	    else	if(Button == 2)
+		{
+			
+					for (int i = 1; i<=5; i++ )
+				cout<<" THANK YOU ===========FOR USING==========ATM MACHINE "<<endl;
+		}
+		break;
+		jumper: case 4: cout<< "  Enter Account Number you want to Send Money  -->>   ";
+			cin>>otherAccHolder;
+	cout<<" YOU ARE SENDING MONEY TO   "<<otherAccHolder<<" account Number"<<endl;
+			int transfer;
+			cout<<"How Much pke you want to tranfer ? "<<endl;
+			cin>>transfer;
+			if(transfer<Balance){
+				
+			
+			
+		Balance = Balance-transfer;
+		cout<<" Amount "<<transfer<<"  is Successfully Transfer to "<<otherAccHolder<<endl;
+		cout<<" Your New Balance is "<<Balance<<endl;
+		goto here;
 }
+if(transfer>Balance){
 
+	cout<<" Sorry Insufficent Balance "<<endl;
+		cout<<" Enter Different Amount "<<endl;
+		goto jumper;
+}
+				case 5 : 
+				for (int i = 1; i<=5; i++ )
+				cout<<" THANK YOU ===========FOR USING==========ATM MACHINE "<<endl;
+				
+						}	
+		
+		
+		while(ab.withdraw % 500 != 0);
+	
+}
+		while(choice == 'Y'||choice == 'y');
 	
 		
-			case 2: 
-			cout<<" Enter Amount which you want to Deposit "<<endl;
-			cin>>ab.diposit;
-			Balance = Balance + ab.diposit;
-			cout<<" "<<ab.diposit <<" Has been diposit to your account "<<"  your new Balance is "<<Balance;
-			cout<<"Press 1  for Main Menu "<<endl;
-			cout<<"Press 2  for Exit "<<endl;
-			cin>>Button;
-			if(Button == 1)
-			goto label;
-		
-	  	    else if(Button == 2)
-	{
-			cout<<" Thank you for Using Programming ATM Machine "<<endl;
-	}
-			
-			
-			case 3: cout<< "  Your Total Balance is "<<"  "<<ab.balance<<endl;
-	}
-		
-		
-			while(ab.withdraw % 500 != 0);
-		
-	}
-			while(choice == 'Y'||choice == 'y');
-		
-		
-	}
+		}
 	
